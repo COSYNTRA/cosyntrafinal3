@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Code, Smartphone, Brain, Cloud, Radio, CheckCircle, ArrowRight } from 'lucide-react';
+import { Code, Smartphone, Brain, Cloud, Radio, CheckCircle, ArrowRight, Tag } from 'lucide-react';
 import { Card } from '../ui/card';
 import { Button } from '../ui/button';
 
@@ -99,6 +99,29 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
       ],
       techStack: ['MQTT', 'Azure IoT', 'AWS IoT', 'LoRaWAN', 'Raspberry Pi'],
     },
+    {
+      icon: Tag,
+      title: 'Annotation Services',
+      description:
+        'Accurate and scalable data annotation solutions empowering AI and machine learning models with high-quality labeled datasets.',
+      gradient: 'from-[#1E3A8A] to-[#F97316]',
+      problems: [
+        'Inconsistent data labeling reducing model accuracy',
+        'Limited scalability for large datasets',
+        'Manual processes causing delays and errors',
+      ],
+      solutions: [
+        'Expert human and AI-assisted annotation',
+        'Multi-format data labeling (image, text, audio, video)',
+        'Quality assurance and validation pipelines',
+        'Scalable and secure data management workflow',
+      ],
+      techStack: ['Label Studio', 'SuperAnnotate', 'CVAT', 'Python', 'AWS SageMaker Ground Truth'],
+    },
+
+
+
+
   ];
 
   return (
