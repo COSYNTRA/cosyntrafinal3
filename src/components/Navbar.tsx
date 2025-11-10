@@ -36,8 +36,8 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
       transition={{ type: 'spring', stiffness: 120, damping: 15 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-xl shadow-lg py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-white/90 backdrop-blur-xl shadow-lg py-2'
+          : 'bg-transparent py-3'
       }`} 
 
        
@@ -53,7 +53,7 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
           <img
             src={isScrolled ? '/LOgoFFFF.PNG' : '/logoNN.png'}
             alt="COSYNTRA Logo"
-            className="h-20 md:h-28 object-contain transition-transform duration-500 ease-in-out hover:scale-110 drop-shadow-[0_6px_16px_rgba(255,255,255,0.35)]"
+            className="h-12 md:h-16 object-contain transition-transform duration-500 ease-in-out hover:scale-110 drop-shadow-[0_6px_16px_rgba(255,255,255,0.35)]"
           />
 
          
