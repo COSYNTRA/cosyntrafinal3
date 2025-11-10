@@ -34,16 +34,13 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 120, damping: 15 }}
-      {/* className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
           ? 'bg-white/90 backdrop-blur-xl shadow-lg py-3'
           : 'bg-transparent py-5'
-      }`}  */}
+      }`} 
 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? 'bg-white/90 backdrop-blur-xl shadow-lg py-2'
-        : 'bg-transparent py-3'
-        }`}
+       
 
     >
       <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
@@ -53,17 +50,13 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
           className="flex items-center space-x-2 group cursor-pointer"
           aria-label="Go to Home"
         >
-          {/* <img
-            src={isScrolled ? '/LOgoFFFF.PNG' : '/logoNN.png'}
-            alt="COSYNTRA Logo"
-            className="h-20 md:h-28 object-contain transition-transform duration-500 ease-in-out hover:scale-110 drop-shadow-[0_6px_16px_rgba(255,255,255,0.35)]"
-          /> */}
-
           <img
             src={isScrolled ? '/LOgoFFFF.PNG' : '/logoNN.png'}
             alt="COSYNTRA Logo"
-            className="h-12 md:h-16 object-contain transition-transform duration-500 ease-in-out hover:scale-110 drop-shadow-[0_6px_16px_rgba(255,255,255,0.35)]"
+            className="h-20 md:h-28 object-contain transition-transform duration-500 ease-in-out hover:scale-110 drop-shadow-[0_6px_16px_rgba(255,255,255,0.35)]"
           />
+
+         
         </button>
 
         {/* ==== Desktop Nav ==== */}
