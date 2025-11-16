@@ -177,7 +177,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
 
       {/* ======== MODAL BASE STYLES ======== */}
-      <style>{`
+        {/* <style>{`
         .custom-scroll::-webkit-scrollbar {
           width: 8px;
         }
@@ -192,10 +192,10 @@ export function Footer({ onNavigate }: FooterProps) {
         .custom-scroll::-webkit-scrollbar-thumb:hover {
           background: #1E40AF;
         }
-      `}</style>
+      `}</style> */}
 
       {/* ===== PRIVACY POLICY MODAL ===== */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showPrivacy && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -233,10 +233,88 @@ export function Footer({ onNavigate }: FooterProps) {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
+      <AnimatePresence>
+         {showPrivacy && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[9999] flex items-center justify-center px-4"
+    >
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        className="
+          bg-white rounded-2xl shadow-2xl
+          w-full max-w-3xl
+          max-h-[90vh]
+          relative
+          flex flex-col
+        "
+      >
+        {/* Close Button */}
+        <button
+          onClick={() => setShowPrivacy(false)}
+          className="
+            absolute top-3 right-3 
+            text-gray-700 hover:text-black
+            z-[10000]
+          "
+        >
+          <X className="w-6 h-6" />
+        </button>
+
+        {/* HEADER (no underline) */}
+        <div className="p-5">
+          <h2 className="text-xl font-bold text-center">Privacy Policy</h2>
+        </div>
+
+        {/* SCROLLABLE CONTENT */}
+        <div
+          className="
+            overflow-y-auto 
+            px-5 py-4 
+            text-gray-700 
+            text-sm 
+            leading-relaxed
+            custom-scroll
+            max-h-[70vh]
+          "
+        >
+          <p><strong>Effective Date:</strong> 1st January, 2021</p>
+          <p><strong>Website:</strong> www.cosyntra.com</p>
+          <p><strong>Company:</strong> COSYNTRA</p>
+
+          <p><strong>1. Information We Collect:</strong> We may collect personal, technical, and usage information when you use our website or services.</p>
+          <p><strong>2. How We Use Information:</strong> To provide services, enhance user experience, communicate updates, and maintain security.</p>
+          <p><strong>3. Cookies:</strong> We use cookies for analytics, performance, and personalized experiences.</p>
+          <p><strong>4. Data Protection:</strong> We follow industry-standard security measures to protect stored and transmitted data.</p>
+          <p><strong>5. Third-Party Sharing:</strong> Data may be shared with trusted vendors required for project execution, but never sold.</p>
+          <p><strong>6. User Rights:</strong> You can request data access, correction, or deletion by contacting us.</p>
+          <p><strong>7. External Links:</strong> We are not responsible for privacy practices of third-party websites.</p>
+          <p><strong>8. Policy Updates:</strong> We may update the policy with prior notice.</p>
+          <p><strong>9. Contact:</strong> info.cosyntra@gmail.com</p>
+        </div>
+
+        {/* FOOTER */}
+        <div className="p-3 border-t text-right">
+          <button
+            onClick={() => setShowPrivacy(false)}
+            className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg"
+          >
+            Close
+          </button>
+        </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
 
       {/* ===== TERMS & CONDITIONS MODAL ===== */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showTerms && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -280,7 +358,86 @@ export function Footer({ onNavigate }: FooterProps) {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
+      <AnimatePresence>
+  {showTerms && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[9999] flex items-center justify-center px-4"
+    >
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        className="
+          bg-white rounded-2xl shadow-2xl
+          w-full max-w-3xl
+          max-h-[90vh]
+          relative
+          flex flex-col
+        "
+      >
+        {/* Close Button - ALWAYS visible */}
+        <button
+          onClick={() => setShowTerms(false)}
+          className="
+            absolute top-3 right-3 
+            text-gray-700 hover:text-black
+            z-[10000]
+          "
+        >
+          <X className="w-6 h-6" />
+        </button>
+
+        {/* HEADER - underline removed */}
+        <div className="p-5">
+          <h2 className="text-xl font-bold text-center">Terms & Conditions</h2>
+        </div>
+
+        {/* BODY - ONLY THIS PART SCROLLS */}
+        <div className="
+          overflow-y-auto 
+          px-5 py-4 
+          text-gray-700 
+          text-sm 
+          leading-relaxed
+          custom-scroll
+          max-h-[70vh]
+        ">
+          <p><strong>Effective Date:</strong> 1st January, 2021</p>
+          <p><strong>Website:</strong> www.cosyntra.com</p>
+          <p><strong>Company:</strong> COSYNTRA</p>
+
+          <p><strong>1. Services Offered:</strong> Website, App, Cloud, Cybersecurity, AI/ML, UI/UX & Software Solutions.</p>
+          <p><strong>2. Project Engagement:</strong> Proposals shared post discussion, legal digital agreement post-approval.</p>
+          <p><strong>3. Payment Terms:</strong> 40% upfront, 30% prototype, 30% final.</p>
+          <p><strong>4. Client Responsibilities:</strong> Provide accurate info, feedback & access.</p>
+          <p><strong>5. Intellectual Property:</strong> Ownership after full payment.</p>
+          <p><strong>6. Confidentiality:</strong> Both must maintain confidentiality.</p>
+          <p><strong>7. Limitation of Liability:</strong> No liability for indirect damages.</p>
+          <p><strong>8. Support:</strong> Mentioned in agreement.</p>
+          <p><strong>9. Termination:</strong> Work completed must be paid for.</p>
+          <p><strong>10. Law:</strong> Indian Law – Barrackpore Jurisdiction.</p>
+          <p><strong>11. Updates:</strong> May update with notice.</p>
+          <p><strong>Contact:</strong> info.cosyntra@gmail.com</p>
+        </div>
+
+        {/* FOOTER (Optional) */}
+        <div className="p-3 border-t text-right">
+          <button
+            onClick={() => setShowTerms(false)}
+            className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg"
+          >
+            Close
+          </button>
+        </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
     </>
   );
 }
