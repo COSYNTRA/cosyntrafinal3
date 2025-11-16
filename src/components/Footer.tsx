@@ -117,7 +117,7 @@ export function Footer({ onNavigate }: FooterProps) {
               </div>
               <div>
                 <p className="text-sm text-blue-100">Email</p>
-                <p className="text-sm">info.cosyntra@gmail.com</p>
+                <p className="text-sm">info@cosyntra.com</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
