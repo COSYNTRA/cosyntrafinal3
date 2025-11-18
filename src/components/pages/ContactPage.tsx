@@ -71,7 +71,7 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
     {
       icon: Mail,
       title: 'Email Us',
-      detail: 'info.cosyntra@gmail.com',
+      detail: 'info@cosyntra.com',
     },
     {
       icon: Phone,
